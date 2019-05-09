@@ -21,7 +21,7 @@
 
 	// Check connection
 	if (!$conn) {
-		die("Connection failed: " . mysqli_connect_error());
+		die("Conexion fallida: " . mysqli_connect_error());
 	}
 	
 	// Query to check if the email already exist
@@ -36,8 +36,8 @@
 	// If count == 1 that means the email is already on the database
 	if ($count == 1) {
 	echo "<div class='alert alert-warning mt-4' role='alert'>
-					<p>That email is already in our database.</p>
-					<p><a href='login.html'>Please login here</a></p>
+					<p> La cuenta ya existe.</p>
+					<p><a href='index.html'>Inicia sesión aqui.</a></p>
 				</div>";
 	} else {	
 	
@@ -56,8 +56,8 @@
 	$query = "INSERT INTO user (Name, Email, Password) VALUES ('$name', '$email', '$passHash')";
 
 	if (mysqli_query($conn, $query)) {
-		echo "<div class='alert alert-success mt-4' role='alert'><h3>Your account has been created.</h3>
-		<a class='btn btn-outline-primary' href='login.html' role='button'>Login</a></div>";		
+		echo "<div class='alert alert-success mt-4' role='alert'><h3>Cuenta creada exitosamente.</h3>
+		<a class='btn btn-outline-primary' href='index.html' role='button'>Login</a></div>";		
 		} else {
 			echo "Error: " . $query . "<br>" . mysqli_error($conn);
 		}	

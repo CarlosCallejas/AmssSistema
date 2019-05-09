@@ -25,7 +25,7 @@ session_start();
 
 			// Check connection
 			if (!$conn) {
-				die("Connection failed: " . mysqli_connect_error());
+				die("Conexión fallida: " . mysqli_connect_error());
 			}
 			
 			// data sent from form login.html 

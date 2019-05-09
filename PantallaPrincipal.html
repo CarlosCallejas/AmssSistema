@@ -1,76 +1,28 @@
 <!DOCTYPE html>
-<html>
-<head>
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.slidecontainer {
-  width: 100%;
-}
 
-.slider {
-  -webkit-appearance: none;
-  width: 75%;
-  height: 25px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <title> Seleccionar Fecha</title>
 
-.slider:hover {
-  opacity: 1;
-}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/custom.css">
+    </head>
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #4CAF50;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #4CAF50;
-  cursor: pointer;
-}
-</style> -->
-</head>
-<body>
-
-<h1>Seleccionar fechas para revisar</h1>
-     	
-<input type="date" name="fecha">
-    <form method="POST" action="buscador.php3"> 
-<input type="submit" value="Buscar" name="buscar"> 
-</form>
-    
-    
-<!-- <p>Arrastra para seleccionar los dias que tomara encuenta el algoritmo</p>
-
-<div class="slidecontainer">
-  <input type="range" min="1" max="365" value="1" class="slider" id="myRange">
-  <p>Revizar hace: <span id="demo"></span></p>
-</div>
-
-<script>
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value+" dias";
-
-slider.oninput = function() {
-  output.innerHTML = this.value+" dias atras";
-}
-</script>
-
-    
-    <form method="POST" action="buscador.php3"> 
-<input type="submit" value="Buscar" name="buscar"> 
-</form> -->
-    
-    <p><a href='logout.php'>Logout</a></p></div>	
-</body>
+    <body> 
+        <form action="buscador.php" method="GET">
+            <label>
+                Ingresa la fecha (Jul 01)
+                <input type="text" name="fecha" autocomplete="off">
+            </label>
+            
+            <input type="submit" value="Buscar">
+        </form>
+        <!--<form method="POST" action="buscador.php"> 
+            <strong>Ingrese la fecha (Jul 01):</strong> <input type="text" name="T1" size="20"><br><br> 
+            <input type="submit" value="Buscar" name="buscar"> 
+        </form> 
+         -->
+         <p><a href='logout.php'>Logout</a></p></div>	
+    </body> 
 </html>
