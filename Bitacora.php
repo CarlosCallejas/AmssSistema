@@ -38,6 +38,7 @@
                 }
             ?>
         </table>
+        <h2>Para descargar la bitacora presionar Cntrl+p </h2>
         <p><a href='logout.php'>Logout</a></p>	
     </BODY>
 </html>
