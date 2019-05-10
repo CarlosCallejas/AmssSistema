@@ -46,6 +46,6 @@
      <script src="demo.js">
     //     PalabraMasRepetida("$result")
     //     </script> --> 
-
+		<img src="boo.PNG">
     </body> 
 </html>
