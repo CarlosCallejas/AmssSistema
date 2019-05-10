@@ -19,13 +19,17 @@
         $c=0;
         $queryText="";
         $query = $conn->query("SELECT tweet_text FROM tweetdiadelaselecciones WHERE tweet_date LIKE '%$buscarFecha%'");
-        while($queryArr =  mysqli_fetch_row($query)){
-            $datos=$queryArr[$c];
-            $queryText .= $datos;
-            $c++;
-        }
-        echo $queryText; 
-    }       
+        $queryArr=mysqli_fetch_assoc($query);
+        $queryText=implode($queryArr);
+        // var_dump($queryArr);
+        echo $queryText;
+    //     while($queryArr =  mysqli_fetch_row($query)){
+    //         $datos=$queryArr[$c];
+    //         $queryText .= $datos;
+    //         $c++;
+    //     }
+    //     echo $queryText; 
+     }       
     ?>
     <div class="result-count">    
         
